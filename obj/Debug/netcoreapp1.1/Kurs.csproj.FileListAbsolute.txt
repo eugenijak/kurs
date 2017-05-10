@@ -1,0 +1,9 @@
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\bin\Debug\netcoreapp1.1\Kurs.deps.json
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\bin\Debug\netcoreapp1.1\Kurs.runtimeconfig.json
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\bin\Debug\netcoreapp1.1\Kurs.runtimeconfig.dev.json
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\bin\Debug\netcoreapp1.1\Kurs.dll
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\bin\Debug\netcoreapp1.1\Kurs.pdb
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\obj\Debug\netcoreapp1.1\Kurs.csprojResolveAssemblyReference.cache
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\obj\Debug\netcoreapp1.1\Kurs.AssemblyInfo.cs
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\obj\Debug\netcoreapp1.1\Kurs.dll
+C:\Users\dinan\Downloads\Kurs\Kurs\Kurs\obj\Debug\netcoreapp1.1\Kurs.pdb

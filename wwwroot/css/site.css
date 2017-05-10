@@ -1,0 +1,187 @@
+﻿body {
+    padding-top: 5vh;
+    color: white;
+    font-family: Arial;
+}
+
+.pad {
+    padding: 0;
+}
+
+nav img {
+    height: 6vh;
+    width: 6vh;
+    margin: 0 1vh;
+}
+
+#googleMap{
+    height: 93vh;
+    width: 100%;
+}
+
+.input-file {
+    height: 93vh;
+    background-color: #222;
+}
+li {
+    font-size: 18px;
+}
+
+form {
+    padding-top: 1vh;
+    float: right;
+}
+
+.input-file {
+    text-align: center;
+}
+
+#filename {
+    background-color: #222;
+    border: 1px solid #222;
+    color: white;
+    margin-bottom:2vh;
+}
+
+.gpx-url, .gpx-file{
+    margin-top: 9vh;
+    background-color: #222;
+}
+
+footer {
+    margin-top: 43vh;
+    background-color: #222;
+}
+
+.input-url {
+    width: auto;
+    color: #222;
+    right: auto;
+    left: auto;
+    margin-bottom: 2vh;
+}
+
+.head {
+    margin-top: 9vh;
+    margin-bottom: 7vh;
+}
+
+footer img {
+    height: 3vh;
+    width: 3vh;
+}
+
+.foot-location {
+    margin-top: 18vh;
+}
+
+.search {
+    margin-top: 9vh;
+}
+
+.info {
+    color: #222;
+    margin: 10vh;
+}
+
+.info p {
+    font-size:18px;
+}
+
+#map-search {
+    color:#222;
+}
+
+.controls {
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}
+
+.controls:focus {
+    border-color: #4d90fe;
+}
+
+.gpx-file {
+    position: relative;
+    overflow: hidden;
+    margin: 1vh 6vh;
+    background-color: #B22222;
+    border-radius: 4px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight:normal;
+}
+
+.gpx-file:hover {
+    background-color: #4682B4;
+}
+
+.gpx-file input {
+    display: none;
+}
+
+.gpx-file span {
+    line-height: 36px;
+}
+
+#reg {
+    float: none;
+    background-color: #222;
+    color: white;
+    box-shadow: 0px 10px 20px #000;
+    width: 70vh;
+    height: 60vh;
+    margin: 10vh auto;
+    border-bottom: 1px solid #2d2f32;
+    border-top: 1px solid #2d2f32;
+    border-radius: 8px;
+    text-align: center;
+    padding: 60px;
+}
+
+#reg h3{
+    margin-top:0;
+}
+
+#reg div {
+    position: relative;
+}
+
+.block-reg {
+    margin:0;
+    background-image:url(../images/back.jpg);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+#room {
+    background-color: #222;
+    padding:50px;
+}
+
+#form-room {
+    float: none;
+    width: 40vh;
+}
+
+.tab-head {
+    color: #222;
+}
+
+.room-file {
+    margin:0;
+    }
+
+.data-gpx:hover  {
+    color:#222;
+}

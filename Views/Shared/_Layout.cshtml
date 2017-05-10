@@ -1,0 +1,76 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Truck web</title>
+    <link rel="SHORTCUT ICON" href="~/map.ico" type="image/x-icon">
+    <link href="~/map.ico" rel="icon" runat="server" type="image/ico" />
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    
+    @Html.Raw(JavaScriptSnippet.FullScript)
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/maps.png" alt="Maps Logo" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Информация</a></li>
+                </ul>
+
+                @model Kurs.ViewModel.AllViewModel
+
+                @{
+                    var user = Kurs.Models.CurrentUser.currentuser;
+                    if (user == null)
+                    {
+                        <ul class="nav navbar-nav">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Register">Регистрация</a></li>
+                        </ul>
+                        <form asp-controller="Home" asp-action="Login" class="form-inline">
+                            <span class="text-danger">@ViewBag.Error</span>
+                            <input asp-for="login.email" type="text" class="form-control" placeholder="Email" />
+                            <span class="text-danger">@Html.ValidationMessageFor(m => m.login.email)</span>
+                            <input asp-for="login.password" type="password" class="form-control" placeholder="Пароль" />
+                            <span class="text-danger">@Html.ValidationMessageFor(m => m.login.password)</span>
+                            <button type="submit" class="btn btn-success">Войти</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Room">@user.email</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Logout">Выйти</a></li>
+                        </ul>
+                    }
+                }
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+          
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        @*key = AIzaSyB9HSouo1F_fT-a9_e7abJ7YDTK9E7vVW4*@
+
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Личный кабинет";
+}
+
+@model Kurs.ViewModel.AllViewModel
+
+<body id="room">
+    <div>
+        <form asp-controller="Home" asp-action="Update" method="post" id="form-room">
+            <div class="form-group">
+                <span class="text-danger">@ViewBag.Pass</span>
+                <h3>Поменять пароль</h3>
+            </div>
+            <div class="form-group">
+                <input asp-for="pass.password" type="password" class="form-control" placeholder="Пароль длинной не менее 8 символов" id="pass" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.pass.password)</span>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Повторите пароль" id="rep-pass" />
+                <span id="err-pass" class="text-danger">Ошибка</span>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Старый пароль" id="old-pass" />
+                <span id="old-err" class="text-danger">Ошибка</span>
+            </div>
+
+            <div class="form-group">
+                <button id="btn-reg" type="submit" class="btn btn-success" disabled>Изменить</button>
+            </div>
+        </form>
+    </div>
+    <hr />
+    <div class="table-responsive">
+        <h3>GPX - треки</h3>
+        <table class="table table-hover table-bordered">
+            <tr class="success tab-head">
+                <td>№</td>
+                <td>Название</td>
+                <td>Файл</td>
+                <td>Действия</td>
+            </tr>
+            @{
+                int i = 0;
+                if (ViewBag.Collections != null)
+                {
+                    foreach (var gpx in ViewBag.Collections)
+                    {
+                        i++;
+                        <tr class="data-gpx">
+                            <td>@i</td>
+                            <td>@gpx.name</td>
+                            <td>@gpx.price</td>
+                            <td>
+                                <a asp-action="Delete" asp-controller="Home" asp-route-id="@gpx.Id">Удалить</a>
+
+                            </td>
+                        </tr>
+                    }
+                }
+            }
+        </table>
+    </div>
+    <hr />
+
+    <div>
+        <form asp-controller="Home" asp-action="insert" method="post" id="form-room">
+            <div class="form-group">
+                <span class="text-danger">@ViewBag.ErrorEmail</span>
+                <h3>Добавить трек</h3>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="gpx.name" type="text" class="form-control" placeholder="Название Service" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.gpx.name)</span>
+                <input asp-for="gpx.price" type="text" class="form-control" placeholder="Price" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.gpx.price)</span>
+            </div>
+
+            <div class="form-group">
+                <button id="btn-reg" type="submit" class="btn btn-success">Добавить</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="~/js/room.js" asp-append-version="true"></script>
+
+</body>
