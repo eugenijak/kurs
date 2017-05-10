@@ -123,9 +123,8 @@ namespace Kurs.Controllers
                     {
                         Id_user = CurrentUser.currentuser.Id,
                         name = model.gpx.name,
-                     //   filepath = "C:\\GPX files\\" + model.gpx.filepath,
-                        price = model.gpx.price
-              
+                        filepath = "C:\\GPX files\\" + model.gpx.filepath,
+                        filename = model.gpx.filepath
                     };
                     db.Gpx.Add(gpx);
                     await db.SaveChangesAsync();
@@ -174,8 +173,7 @@ namespace Kurs.Controllers
         public IActionResult CurrentGPX(int id)
         {
             UsersGPX gpx = db.Gpx.FirstOrDefault(x => x.Id == id);
-            CurrentUser.path = gpx.name;
-
+            CurrentUser.path = gpx.filepath;
             return View("Index");
         }
 

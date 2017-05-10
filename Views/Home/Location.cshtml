@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Местоположение";
+}
+
+<div class="container-fluid body-content">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-4 input-file pad">
+            <header class="head">
+                <h3>Определение</h3>
+                <h3>местоположения</h3>
+            </header>
+
+            <input type="text" id="map-search" class="controls" />
+            <div class="search">
+                <p>Введите широту</p>
+                <input id="lat" type="text" class="input-url controls" />
+                <p class="text-danger" id="errorlat">Ошибка ввода</p>
+                <p>Введите долготу</p>
+                <input id="lng" type="text" class="input-url controls"/>
+                <p class="text-danger" id="errorlng">Ошибка ввода</p>
+            </div>
+            <button id="btnsearch" class="btn btn-success">Найти</button>
+            
+            <footer class="foot-location">
+                <p>&copy; 2017 - Evgeny Popkov <a href="https://vk.com/evgenypopkov" target="_blank"><img src="~/images/vk.png" /></a></p>
+            </footer>
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-8 map pad">
+            
+            <div id="googleMap"></div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/search.js" asp-append-version="true"></script>

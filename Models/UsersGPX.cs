@@ -12,9 +12,9 @@ namespace Kurs.Models
         [Required(ErrorMessage = "Введите название")]
         public string name { get; set; }
 
-        //[Required(ErrorMessage = "Выберите файл")]
-        //public string filepath { get; set; }
-        [Required(ErrorMessage = "Введите Цену")]
-        public string price { get; set; }
+        [Required(ErrorMessage = "Выберите файл")]
+        public string filepath { get; set; }
+
+        public string filename { get; set; }
     }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Truck web</title>
+    <title>@ViewData["Title"] - GPX Google Maps</title>
     <link rel="SHORTCUT ICON" href="~/map.ico" type="image/x-icon">
     <link href="~/map.ico" rel="icon" runat="server" type="image/ico" />
     <environment names="Development">
@@ -29,7 +29,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                
+                    <li><a asp-area="" asp-controller="Home" asp-action="Gpx">GPX</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Location">Местоположение</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">Информация</a></li>
                 </ul>
 
@@ -68,7 +69,7 @@
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         @*key = AIzaSyB9HSouo1F_fT-a9_e7abJ7YDTK9E7vVW4*@
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HSouo1F_fT-a9_e7abJ7YDTK9E7vVW4&callback=myMap&libraries=places"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)

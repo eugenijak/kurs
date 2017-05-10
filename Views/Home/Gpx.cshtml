@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Отображение GPX";
+}
+
+<div class="container-fluid body-content">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-4 input-file pad">
+            <header class="head">
+                <h3>Отображение</h3>
+                <h3>GPX - треков</h3>
+            </header>
+            
+            <div class="gpx-file">
+                <label>
+                    <input type="file" name="file" id="file">
+                    <span>Выберите файл</span>
+                </label>
+            </div>
+
+            <input type="text" id="filename" class="filename" disabled>
+            <button id="btn-file" class="btn btn-success">Отобразить GPX-трек</button>
+            <p class="text-danger" id="errorfile">Выберите другой файл</p>
+            
+            <footer>
+                <p>&copy; 2017 - Evgeny Popkov <a href="https://vk.com/evgenypopkov" target="_blank"><img src="~/images/vk.png" /></a></p>
+            </footer>
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-8 map pad">
+            <div id = "googleMap"></div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/gpxviewer.js" asp-append-version="true"></script>
